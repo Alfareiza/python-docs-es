@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-25 19:47+0200\n"
-"PO-Revision-Date: 2023-01-16 09:30-0300\n"
+"PO-Revision-Date: 2023-03-20 13:43-0300\n"
 "Last-Translator: Francisco Mora <fr.morac@duocuc.cl>\n"
 "Language-Team: python-doc-es\n"
 "Language: es\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.10.3\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: ../Doc/library/logging.rst:2
 msgid ":mod:`logging` --- Logging facility for Python"
@@ -75,7 +75,6 @@ msgid "The simplest example:"
 msgstr "El ejemplo simple:"
 
 #: ../Doc/library/logging.rst:41
-#, fuzzy
 msgid ""
 "The module provides a lot of functionality and flexibility.  If you are "
 "unfamiliar with logging, the best way to get to grips with it is to view the "
@@ -83,7 +82,7 @@ msgid ""
 msgstr ""
 "El módulo proporciona mucha funcionalidad y flexibilidad. Si no está "
 "familiarizado con logging, la mejor manera de familiarizarse con él es ver "
-"los tutoriales (ver los enlaces a la derecha)."
+"los tutoriales (**ver los enlaces a la derecha**)."
 
 #: ../Doc/library/logging.rst:45
 msgid ""
@@ -348,7 +347,7 @@ msgstr ""
 "principal se nombra usando e.j. ``__name__`` en lugar de una cadena literal."
 
 #: ../Doc/library/logging.rst:175
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Logs a message with level :const:`DEBUG` on this logger. The *msg* is the "
 "message format string, and the *args* are the arguments which are merged "
@@ -361,8 +360,8 @@ msgstr ""
 "la cadena de formato del mensaje, y los *args* son los argumentos que se "
 "fusionan en *msg* utilizando el operador de formato de cadena. (Tenga en "
 "cuenta que esto significa que puede usar palabras clave en la cadena de "
-"formato, junto con un solo argumento de diccionario). No se realiza ninguna "
-"operación de %formateo en *msg* cuando no se suministran *args*."
+"formato, junto con un solo argumento del diccionario). No se realiza ninguna "
+"operación de % formateo en *msg* cuando no se suministran *args*."
 
 #: ../Doc/library/logging.rst:181
 msgid ""
@@ -464,16 +463,15 @@ msgid "would print something like"
 msgstr "imprimiría algo como"
 
 #: ../Doc/library/logging.rst:235
-#, fuzzy
 msgid ""
 "The keys in the dictionary passed in *extra* should not clash with the keys "
 "used by the logging system. (See the section on :ref:`logrecord-attributes` "
 "for more information on which keys are used by the logging system.)"
 msgstr ""
-"Las claves en el diccionario pasado *extra* no deben entrar en conflicto con "
+"Las llaves en el diccionario pasado *extra* no deben entrar en conflicto con "
 "las claves utilizadas por el sistema de registro. (Ver la documentación de :"
-"class:`Formatter` para obtener más información sobre qué claves utiliza el "
-"sistema de registro)."
+"class:`Formatter` para obtener más información sobre cuales llaves utiliza "
+"el sistema de registro)."
 
 #: ../Doc/library/logging.rst:239
 msgid ""
@@ -952,7 +950,6 @@ msgstr ""
 "configuran dichos gestores."
 
 #: ../Doc/library/logging.rst:534
-#, fuzzy
 msgid ""
 "Many logging APIs lock the module-level lock. If such an API is called from "
 "this method, it could cause a deadlock if a configuration call is made on "
@@ -1091,7 +1088,6 @@ msgid "The *defaults* parameter was added."
 msgstr "Se agregó el parámetro *defaults*."
 
 #: ../Doc/library/logging.rst:602
-#, fuzzy
 msgid ""
 "The record's attribute dictionary is used as the operand to a string "
 "formatting operation. Returns the resulting string. Before formatting the "
@@ -1118,13 +1114,13 @@ msgstr ""
 "excepción, se formatea usando :meth:`formatException` y se adjunta al "
 "mensaje. Tenga en cuenta que la información de excepción formateada se "
 "almacena en caché en el atributo *exc_text*. Esto es útil porque la "
-"información de excepción se puede serializar con pickle (*pickled*) y "
-"propagarse por el cable, pero debe tener cuidado si tiene más de una "
-"subclase de :class:`Formatter` que personaliza el formato de la información "
-"de la excepción. En este caso, tendrá que borrar el valor almacenado en "
-"caché después de que un formateador haya terminado su formateo, para que el "
-"siguiente formateador que maneje el evento no use el valor almacenado en "
-"caché sino que lo recalcule de nuevo."
+"información de excepción se puede serializar con pickle y propagarse por el "
+"cable, pero debe tener cuidado si tiene más de una subclase de :class:"
+"`Formatter` que personaliza el formato de la información de la excepción. En "
+"este caso, tendrá que borrar el valor almacenado en caché (configurando el "
+"atributo *exc_text* como ``None``) después de que un formateador haya "
+"realizado su formateo, de modo que el siguiente formateador que maneje el "
+"evento no utilice el caché, pero lo vuelve a calcular de nuevo."
 
 #: ../Doc/library/logging.rst:618
 msgid ""
@@ -1230,7 +1226,6 @@ msgstr ""
 "entrada."
 
 #: ../Doc/library/logging.rst:673
-#, fuzzy
 msgid ""
 "A base formatter class suitable for subclassing when you want to format a "
 "number of records. You can pass a :class:`Formatter` instance which you want "
@@ -1238,11 +1233,11 @@ msgid ""
 "specified, the default formatter (which just outputs the event message) is "
 "used as the line formatter."
 msgstr ""
-"Una clase base de formateador adecuada para subclasificar cuando se desea "
-"formatear un número de registros. Puede pasar una instancia :class:"
-"`Formatter` que desee utilizar para formatear cada línea (que corresponde a "
-"un único registro). Si no se especifica, el formateador por defecto (que "
-"sólo muestra el mensaje del evento) se utiliza como formateador de línea."
+"Una clase de formateador base adecuada para crear subclases cuando desea "
+"formatear una cantidad de registros. Puede pasar una instancia de :class:"
+"`Formatter` que desea usar para formatear cada línea (que corresponde a un "
+"solo registro). Si no se especifica, el formateador predeterminado (que solo "
+"genera el mensaje de evento) se utiliza como formateador de línea."
 
 #: ../Doc/library/logging.rst:681
 msgid ""
@@ -1405,31 +1400,28 @@ msgid "Contains all the information pertinent to the event being logged."
 msgstr "Contiene toda la información pertinente al evento que se registra."
 
 #: ../Doc/library/logging.rst:771
-#, fuzzy
 msgid ""
 "The primary information is passed in *msg* and *args*, which are combined "
 "using ``msg % args`` to create the :attr:`!message` attribute of the record."
 msgstr ""
-"La información principal se pasa en :attr:`msg` y :attr:`args`, que se "
-"combinan usando ``msg % args`` para crear el campo :attr:`message` del "
-"registro."
+"La información principal se pasa en *msg* y *args*, que se combinan usando "
+"``msg % args`` para crear el atributo :attr:`!message` del registro."
 
 #: ../Doc/library/logging.rst
 msgid "Parameters"
 msgstr "Parámetros"
 
 #: ../Doc/library/logging.rst:775
-#, fuzzy
 msgid ""
 "The name of the logger used to log the event represented by this :class:`!"
 "LogRecord`. Note that the logger name in the :class:`!LogRecord` will always "
 "have this value, even though it may be emitted by a handler attached to a "
 "different (ancestor) logger."
 msgstr ""
-"El nombre del logger utilizado para registrar el evento representado por "
-"este LogRecord. Tenga en cuenta que este nombre siempre tendrá este valor, "
-"aunque puede ser emitido por un gestor adjunto a un logger diferente "
-"(ancestro)."
+"El nombre del registrador utilizado para registrar el evento representado "
+"por esta :class:`!LogRecord`. Tenga en cuenta que el nombre del registrador "
+"en :class:`!LogRecord` siempre tendrá este valor, aunque puede ser emitido "
+"por un controlador adjunto a un registrador diferente (ancestro)."
 
 #: ../Doc/library/logging.rst:783
 msgid ""
@@ -1444,12 +1436,11 @@ msgstr ""
 "attr:`!levelname` para el nombre del nivel correspondiente."
 
 #: ../Doc/library/logging.rst:790
-#, fuzzy
 msgid ""
 "The full string path of the source file where the logging call was made."
 msgstr ""
-"El nombre de ruta completo del archivo de origen donde se realizó la llamada "
-"logging."
+"El nombre completo de la ruta del archivo de origen donde se realizó la "
+"llamada de registro."
 
 #: ../Doc/library/logging.rst:794
 msgid "The line number in the source file where the logging call was made."
@@ -1458,13 +1449,13 @@ msgstr ""
 "logging."
 
 #: ../Doc/library/logging.rst:798
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "The event description message, which can be a %-format string with "
 "placeholders for variable data."
 msgstr ""
-"El mensaje de descripción del evento, posiblemente una cadena de %- formato "
-"con marcadores de posición para datos variables."
+"El mensaje de descripción del evento, el cual puede ser una cadena de "
+"%- formato con marcadores de posición para datos variables."
 
 #: ../Doc/library/logging.rst:802
 msgid ""
@@ -1475,13 +1466,13 @@ msgstr ""
 "descripción del evento."
 
 #: ../Doc/library/logging.rst:806
-#, fuzzy
 msgid ""
 "An exception tuple with the current exception information, as returned by :"
 "func:`sys.exc_info`, or ``None`` if no exception information is available."
 msgstr ""
-"Una tupla de excepción con la información de excepción actual, o ``None`` si "
-"no hay información de excepción disponible."
+"Una tupla de excepción con la información de la excepción actual, como la "
+"devuelve :func:`sys.exc_info`, o ``None`` si no hay información de excepción "
+"disponible."
 
 #: ../Doc/library/logging.rst:811
 msgid ""
@@ -1550,7 +1541,7 @@ msgid "LogRecord attributes"
 msgstr "Atributos LogRecord"
 
 #: ../Doc/library/logging.rst:858
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "The LogRecord has a number of attributes, most of which are derived from the "
 "parameters to the constructor. (Note that the names do not always correspond "
@@ -1564,10 +1555,10 @@ msgstr ""
 "derivan de los parámetros del constructor. (Tenga en cuenta que los nombres "
 "no siempre se corresponden exactamente entre los parámetros del constructor "
 "de LogRecord y los atributos de LogRecord). Estos atributos pueden "
-"utilizarse para combinar los datos del registro en la cadena de formato. La "
-"siguiente tabla enumera (en orden alfabético) los nombres de los atributos, "
-"sus significados y el correspondiente marcador de posición en una cadena de "
-"formato de %-estilo."
+"utilizarse para combinar los datos del registro en el formato de la cadena. "
+"La siguiente tabla enumera (en orden alfabético) los nombres de los "
+"atributos, sus significados y el correspondiente marcador de posición en una "
+"cadena de formato de %-estilo."
 
 #: ../Doc/library/logging.rst:866
 msgid ""
@@ -2364,7 +2355,7 @@ msgstr ""
 "correspondiente valor numérico del nivel."
 
 #: ../Doc/library/logging.rst:1224
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "If no matching numeric or string value is passed in, the string 'Level %s' "
 "% level is returned."
@@ -2459,13 +2450,12 @@ msgid "*filename*"
 msgstr "*filename*"
 
 #: ../Doc/library/logging.rst:1272
-#, fuzzy
 msgid ""
 "Specifies that a :class:`FileHandler` be created, using the specified "
 "filename, rather than a :class:`StreamHandler`."
 msgstr ""
-"Especifica que se cree un *FileHandler*, utilizando el nombre de archivo "
-"especificado, en lugar de *StreamHandler*."
+"Especifica que se cree un :class:`FileHandler`, utilizando el nombre de "
+"archivo especificado, en lugar de un :class:`StreamHandler`."
 
 #: ../Doc/library/logging.rst:1276
 msgid "*filemode*"
@@ -2580,14 +2570,13 @@ msgid "*encoding*"
 msgstr "*encoding*"
 
 #: ../Doc/library/logging.rst:1320
-#, fuzzy
 msgid ""
 "If this keyword argument is specified along with *filename*, its value is "
 "used when the :class:`FileHandler` is created, and thus used when opening "
 "the output file."
 msgstr ""
 "Si este argumento de palabra clave se especifica junto con *filename*, su "
-"valor se utiliza cuando se crea el FileHandler, y por lo tanto se utiliza al "
+"valor se usa cuando se crea :class:`FileHandler` y, por lo tanto, se usa al "
 "abrir el archivo de salida."
 
 #: ../Doc/library/logging.rst:1325
@@ -2595,7 +2584,6 @@ msgid "*errors*"
 msgstr "*errors*"
 
 #: ../Doc/library/logging.rst:1325
-#, fuzzy
 msgid ""
 "If this keyword argument is specified along with *filename*, its value is "
 "used when the :class:`FileHandler` is created, and thus used when opening "
@@ -2608,7 +2596,7 @@ msgstr ""
 "utiliza al abrir el archivo de salida. Si no se especifica, se utiliza el "
 "valor 'backslashreplace'. Tenga en cuenta que si se especifica ``None``, se "
 "pasará como tal a :func:`open`, lo que significa que se tratará igual que "
-"pasar 'errores'.                  "
+"pasar 'errores'."
 
 #: ../Doc/library/logging.rst:1336
 msgid "The *style* argument was added."
