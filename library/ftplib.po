@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-12 19:43+0200\n"
-"PO-Revision-Date: 2024-10-22 13:05-0300\n"
+"PO-Revision-Date: 2024-10-23 14:09-0300\n"
 "Last-Translator: Meta Louis-Kosmas <louiskmeta@gmail.com>\n"
 "Language-Team: python-doc-es\n"
 "Language: es\n"
@@ -52,7 +52,6 @@ msgid "The default encoding is UTF-8, following :rfc:`2640`."
 msgstr "La codificación predeterminada es UTF-8, siguiendo :rfc:`2640`."
 
 #: ../Doc/includes/wasm-notavail.rst:3
-#, fuzzy
 msgid ":ref:`Availability <availability>`: not Emscripten, not WASI."
 msgstr ":ref:`Disponibilidad <availability>`: ni Emscripten, ni WASI."
 
